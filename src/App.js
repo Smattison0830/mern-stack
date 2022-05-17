@@ -1,10 +1,11 @@
 import React from 'react';
-import NewGoal from '.components/NewGoal'
+import GoalList from './components/GoalList'
 import './App.css';
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="course-goals">
+      <GoalList />
 
     </div>
   );
