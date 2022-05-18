@@ -1,5 +1,6 @@
 import React from "react";
 import GoalList from "./components/GoalList";
+import NewGoal from "./components/NewGoal";
 import "./App.css";
 
 export default function App() {
@@ -9,8 +10,14 @@ export default function App() {
     { id: "cg3", text: "GET A JOB!" },
   ];
 
+  const addNewGoalHandler = (newGoal) => {
+    courseGoals.push(newGoal);
+    console.log(courseGoals);
+  };
+
   return (
     <div className='course-goals'>
+      <NewGoal onAddGoal={addNewGoalHandler} />
       <GoalList goals={courseGoals} />
     </div>
   );
